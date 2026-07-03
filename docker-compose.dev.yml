@@ -1,0 +1,33 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: webappboilerplate-dev
+    ports:
+      - "8080:8080"   # Nginx reverse proxy (frontend + backend)
+      - "4200:4200"   # Angular dev server (direct access)
+      - "8081:8081"   # Spring Boot (direct access)
+      - "5005:5005"   # Remote debugging
+    volumes:
+      - ./backend:/app/backend
+      - ./frontend:/app/frontend
+      - maven_cache:/root/.m2
+      - node_modules:/app/frontend/node_modules
+      - h2_data:/app/backend/data
+    environment:
+      SPRING_PROFILES_ACTIVE: h2
+      SERVER_PORT: 8081
+      MAVEN_OPTS: "-Xmx512m"
+      NODE_ENV: development
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  maven_cache:
+  node_modules:
+  h2_data:
