@@ -71,6 +71,8 @@ dev-start:
 	@echo ""
 	@echo "📋 View logs: make dev-logs"
 
+
+
 dev-down:
 	@echo "⛔ Stopping development environment..."
 	docker compose -f docker-compose.dev.yml down
