@@ -10,7 +10,7 @@ CREATE EXTENSION IF NOT EXISTS postgis;
 CREATE TABLE geo_feature (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     name VARCHAR(255) NOT NULL,
-    feature_class CHAR(1) NOT NULL,       -- ex: 'A' (Admin), 'H' (Hydro), 'S' (Structure)
+    feature_class VARCHAR(1) NOT NULL,        -- ex: 'A' (Admin), 'H' (Hydro), 'S' (Structure)
     feature_code VARCHAR(50) NOT NULL,     -- ex: 'PCLI' (Pays), 'AIRP' (Aéroport), 'PORT' (Port)
     geom GEOMETRY(Geometry, 4326) NOT NULL, -- Stocke Point, Polygon, MultiPolygon... en WGS84
     properties JSONB NOT NULL DEFAULT '{}'::jsonb, -- Conteneur pour attributs customs (ICAO, STANAG...)

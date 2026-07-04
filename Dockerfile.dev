@@ -40,7 +40,6 @@ RUN if [ -f /app/frontend/package.json ]; then \
 EXPOSE 8080 8081 5005 4200
 
 # Set environment variables
-ENV SPRING_PROFILES_ACTIVE=h2
 ENV JAVA_OPTS="-Xmx512m -Xms256m -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
 ENV MAVEN_OPTS="-Xmx512m"
 

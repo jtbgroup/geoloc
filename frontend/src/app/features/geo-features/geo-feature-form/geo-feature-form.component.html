@@ -1,0 +1,61 @@
+<div class="page-header">
+  <button mat-icon-button class="btn-back" (click)="cancel()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h2 class="page-title">
+    {{ (isEdit ? 'geoFeatures.editFeature' : 'geoFeatures.createFeature') | translate }}
+  </h2>
+</div>
+
+<div class="form-card">
+  <form [formGroup]="featureForm" (ngSubmit)="onSubmit()" class="feature-form">
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'geoFeatures.name' | translate }}</mat-label>
+      <input matInput formControlName="name" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'geoFeatures.featureClass' | translate }}</mat-label>
+      <mat-select formControlName="featureClass" required>
+        @for (fc of featureClasses; track fc.code) {
+          <mat-option [value]="fc.code">{{ fc.code }} — {{ fc.label }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'geoFeatures.featureCode' | translate }}</mat-label>
+      <input matInput formControlName="featureCode" placeholder="PCLI, AIRP, PRT, SEA…" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'geoFeatures.sourceId' | translate }}</mat-label>
+      <input matInput formControlName="sourceId" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'geoFeatures.latitude' | translate }}</mat-label>
+      <input matInput type="number" step="any" formControlName="latitude" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'geoFeatures.longitude' | translate }}</mat-label>
+      <input matInput type="number" step="any" formControlName="longitude" required />
+    </mat-form-field>
+
+    @if (error) {
+      <div class="form-error">{{ error }}</div>
+    }
+
+    <div class="form-actions">
+      <button mat-stroked-button type="button" (click)="cancel()">
+        {{ 'geoFeatures.cancel' | translate }}
+      </button>
+      <button mat-flat-button class="btn-save" type="submit" [disabled]="featureForm.invalid">
+        {{ (isEdit ? 'geoFeatures.save' : 'geoFeatures.create') | translate }}
+      </button>
+    </div>
+
+  </form>
+</div>

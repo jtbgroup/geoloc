@@ -10,7 +10,7 @@ CREATE TABLE app_user (
 
 INSERT INTO app_user (id, username, password, role, enabled)
 VALUES (
-    RANDOM_UUID(),
+    gen_random_uuid(),
     'admin',
     '$2b$12$Cjcy4.MrV8DCzBOQlLSdVuY5iKWeU7D1p7uGY0TqdK468LsB4v4vS',
     'ADMIN',

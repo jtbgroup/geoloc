@@ -3,23 +3,27 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    container_name: webappboilerplate-dev
+    container_name: geoloc-dev
     ports:
-      - "8080:8080"   # Nginx reverse proxy (frontend + backend)
-      - "4200:4200"   # Angular dev server (direct access)
-      - "8081:8081"   # Spring Boot (direct access)
-      - "5005:5005"   # Remote debugging
+      - "8080:8080"
+      - "4200:4200"
+      - "8081:8081"
+      - "5005:5005"
     volumes:
       - ./backend:/app/backend
       - ./frontend:/app/frontend
       - maven_cache:/root/.m2
       - node_modules:/app/frontend/node_modules
-      - h2_data:/app/backend/data
     environment:
-      SPRING_PROFILES_ACTIVE: h2
       SERVER_PORT: 8081
       MAVEN_OPTS: "-Xmx512m"
       NODE_ENV: development
+      DB_URL: jdbc:postgresql://postgres:5432/geoloc
+      DB_USERNAME: geoloc
+      DB_PASSWORD: geoloc
+    depends_on:
+      postgres:
+        condition: service_healthy
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080"]
       interval: 30s
@@ -27,7 +31,24 @@ services:
       retries: 3
       start_period: 60s
 
+  postgres:
+    image: postgis/postgis:17-3.4-alpine
+    container_name: geoloc-dev-postgres
+    environment:
+      POSTGRES_DB: geoloc
+      POSTGRES_USER: geoloc
+      POSTGRES_PASSWORD: geoloc
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U geoloc"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
 volumes:
   maven_cache:
   node_modules:
-  h2_data:
+  postgres_dev_data:

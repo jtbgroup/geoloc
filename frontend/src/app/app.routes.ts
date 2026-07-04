@@ -1,54 +1,93 @@
-import { Routes } from '@angular/router';
-import { authGuard } from './core/guards/auth.guard';
-import { adminGuard } from './core/guards/admin.guard';
+import { Routes } from "@angular/router";
+import { authGuard } from "./core/guards/auth.guard";
+import { adminGuard } from "./core/guards/admin.guard";
 
 export const routes: Routes = [
   {
-    path: 'login',
+    path: "login",
     loadComponent: () =>
-      import('./features/auth/login/login.component').then(m => m.LoginComponent)
+      import("./features/auth/login/login.component").then(
+        (m) => m.LoginComponent,
+      ),
   },
   {
     // Shell layout: header + router-outlet for all protected pages
-    path: '',
+    path: "",
     canActivate: [authGuard],
     loadComponent: () =>
-      import('./shared/components/shell/app-shell.component').then(m => m.AppShellComponent),
+      import("./shared/components/shell/app-shell.component").then(
+        (m) => m.AppShellComponent,
+      ),
     children: [
       {
-        path: '',
+        path: "",
         loadComponent: () =>
-          import('./features/home/home.component').then(m => m.HomeComponent)
+          import("./features/home/home.component").then((m) => m.HomeComponent),
       },
       {
-        path: 'me/change-password',
+        path: "me/change-password",
         loadComponent: () =>
-          import('./features/users/change-password/change-password.component').then(
-            m => m.ChangePasswordComponent
-          )
+          import("./features/users/change-password/change-password.component").then(
+            (m) => m.ChangePasswordComponent,
+          ),
       },
       {
-        path: 'admin/users',
+        path: "admin/users",
         canActivate: [adminGuard],
         loadComponent: () =>
-          import('./features/users/user-list/user-list.component').then(m => m.UserListComponent)
+          import("./features/users/user-list/user-list.component").then(
+            (m) => m.UserListComponent,
+          ),
       },
       {
-        path: 'admin/users/new',
+        path: "admin/users/new",
         canActivate: [adminGuard],
         loadComponent: () =>
-          import('./features/users/user-form/user-form.component').then(m => m.UserFormComponent)
+          import("./features/users/user-form/user-form.component").then(
+            (m) => m.UserFormComponent,
+          ),
       },
       {
-        path: 'admin/users/:id/edit',
+        path: "admin/users/:id/edit",
         canActivate: [adminGuard],
         loadComponent: () =>
-          import('./features/users/user-form/user-form.component').then(m => m.UserFormComponent)
-      }
-    ]
+          import("./features/users/user-form/user-form.component").then(
+            (m) => m.UserFormComponent,
+          ),
+      },
+
+      {
+        path: "geo-features",
+        loadComponent: () =>
+          import("./features/geo-features/geo-feature-list/geo-feature-list.component").then(
+            (m) => m.GeoFeatureListComponent,
+          ),
+      },
+      {
+        path: "geo-features/new",
+        loadComponent: () =>
+          import("./features/geo-features/geo-feature-form/geo-feature-form.component").then(
+            (m) => m.GeoFeatureFormComponent,
+          ),
+      },
+      {
+        path: "geo-features/:id/edit",
+        loadComponent: () =>
+          import("./features/geo-features/geo-feature-form/geo-feature-form.component").then(
+            (m) => m.GeoFeatureFormComponent,
+          ),
+      },
+      {
+        path: "geo-search",
+        loadComponent: () =>
+          import("./features/geo-search/geo-search.component").then(
+            (m) => m.GeoSearchComponent,
+          ),
+      },
+    ],
   },
   {
-    path: '**',
-    redirectTo: ''
-  }
+    path: "**",
+    redirectTo: "",
+  },
 ];

@@ -1,0 +1,35 @@
+<div class="search-container">
+  <h2 class="page-title">{{ 'geoSearch.title' | translate }}</h2>
+
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>{{ 'geoSearch.placeholder' | translate }}</mat-label>
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput [(ngModel)]="query" (ngModelChange)="onInput()" autocomplete="off" />
+  </mat-form-field>
+
+  @if (loading) {
+    <div class="search-loading">
+      <mat-spinner diameter="24" />
+    </div>
+  }
+
+  @if (!loading && searched && results.length === 0) {
+    <p class="no-results">{{ 'geoSearch.noResults' | translate }}</p>
+  }
+
+  @if (results.length) {
+    <ul class="result-list">
+      @for (result of results; track result.id) {
+        <li class="result-item">
+          <span class="result-name">{{ result.name }}</span>
+          <span class="result-tag">{{ result.featureClass }}/{{ result.featureCode }}</span>
+          @if (result.latitude !== null && result.longitude !== null) {
+            <span class="result-coords">
+              {{ result.latitude | number:'1.4-4' }}, {{ result.longitude | number:'1.4-4' }}
+            </span>
+          }
+        </li>
+      }
+    </ul>
+  }
+</div>

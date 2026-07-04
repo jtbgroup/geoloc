@@ -1,7 +1,7 @@
 <header class="app-toolbar">
 
   <span class="app-title">
-    <span class="title-accent">webapp</span>boilerplate
+    <span class="title-accent">webapp</span>GEOLOC
   </span>
 
   <div class="nav-divider-left"></div>
@@ -18,6 +18,16 @@
       </button>
     </mat-menu>
   }
+
+  <button class="nav-btn" (click)="router.navigate(['/geo-search'])">
+  <mat-icon>search</mat-icon>
+  {{ 'header.geoSearch' | translate }}
+</button>
+
+<button class="nav-btn" (click)="router.navigate(['/geo-features'])">
+  <mat-icon>public</mat-icon>
+  {{ 'header.geoFeatures' | translate }}
+</button>
 
   <span class="spacer"></span>
 
