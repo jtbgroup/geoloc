@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Paris", "featureClass": "A", "featureCode": "ADM", "sourceId": "IGN_GEODATA", "startDate": "1790-03-04", "latitude": 48.8566, "longitude": 2.3522, "properties": {"type": "departement", "code": "75", "iso_a3": "FRA", "region": "Europe"}
+  },
+  {
+    "name": "Bouches-du-Rhône", "featureClass": "A", "featureCode": "ADM", "sourceId": "IGN_GEODATA", "startDate": "1790-03-04", "latitude": 43.5297, "longitude": 5.4474, "properties": {"type": "departement", "code": "13", "iso_a3": "FRA", "region": "Europe"}
+  },
+  {
+    "name": "Rhône", "featureClass": "A", "featureCode": "ADM", "sourceId": "IGN_GEODATA", "startDate": "1790-03-04", "latitude": 45.7640, "longitude": 4.8357, "properties": {"type": "departement", "code": "69", "iso_a3": "FRA", "region": "Europe"}
+  },
+  {
+    "name": "Nord", "featureClass": "A", "featureCode": "ADM", "sourceId": "IGN_GEODATA", "startDate": "1790-03-04", "latitude": 50.6292, "longitude": 3.0573, "properties": {"type": "departement", "code": "59", "iso_a3": "FRA", "region": "Europe"}
+  },
+  {
+    "name": "Gironde", "featureClass": "A", "featureCode": "ADM", "sourceId": "IGN_GEODATA", "startDate": "1790-03-04", "latitude": 44.8378, "longitude": -0.5792, "properties": {"type": "departement", "code": "33", "iso_a3": "FRA", "region": "Europe"}
+  },
+  {
+    "name": "Haute-Garonne", "featureClass": "A", "featureCode": "ADM", "sourceId": "IGN_GEODATA", "startDate": "1790-03-04", "latitude": 43.6047, "longitude": 1.4442, "properties": {"type": "departement", "code": "31", "iso_a3": "FRA", "region": "Europe"}
+  },
+  {
+    "name": "Alpes-Maritimes", "featureClass": "A", "featureCode": "ADM", "sourceId": "IGN_GEODATA", "startDate": "1790-03-04", "latitude": 43.7102, "longitude": 7.2620, "properties": {"type": "departement", "code": "06", "iso_a3": "FRA", "region": "Europe"}
+  },
+  {
+    "name": "Loire-Atlantique", "featureClass": "A", "featureCode": "ADM", "sourceId": "IGN_GEODATA", "startDate": "1790-03-04", "latitude": 47.2184, "longitude": -1.5536, "properties": {"type": "departement", "code": "44", "iso_a3": "FRA", "region": "Europe"}
+  },
+  {
+    "name": "Bas-Rhin", "featureClass": "A", "featureCode": "ADM", "sourceId": "IGN_GEODATA", "startDate": "1790-03-04", "latitude": 48.5734, "longitude": 7.7521, "properties": {"type": "departement", "code": "67", "iso_a3": "FRA", "region": "Europe"}
+  },
+  {
+    "name": "Finistère", "featureClass": "A", "featureCode": "ADM", "sourceId": "IGN_GEODATA", "startDate": "1790-03-04", "latitude": 48.3905, "longitude": -4.4861, "properties": {"type": "departement", "code": "29", "iso_a3": "FRA", "region": "Europe"}
+  },
+  {
+    "name": "Bavaria", "featureClass": "A", "featureCode": "ADM", "sourceId": "DESTATIS_GEODATA", "startDate": "1949-05-23", "latitude": 48.7904, "longitude": 11.4979, "properties": {"type": "land", "code": "BY", "iso_a3": "DEU", "region": "Europe"}
+  },
+  {
+    "name": "Berlin", "featureClass": "A", "featureCode": "ADM", "sourceId": "DESTATIS_GEODATA", "startDate": "1949-05-23", "latitude": 52.5200, "longitude": 13.4050, "properties": {"type": "land", "code": "BE", "iso_a3": "DEU", "region": "Europe"}
+  },
+  {
+    "name": "North Rhine-Westphalia", "featureClass": "A", "featureCode": "ADM", "sourceId": "DESTATIS_GEODATA", "startDate": "1949-05-23", "latitude": 51.4332, "longitude": 7.6616, "properties": {"type": "land", "code": "NW", "iso_a3": "DEU", "region": "Europe"}
+  },
+  {
+    "name": "Baden-Württemberg", "featureClass": "A", "featureCode": "ADM", "sourceId": "DESTATIS_GEODATA", "startDate": "1952-04-25", "latitude": 48.2091, "longitude": 9.1368, "properties": {"type": "land", "code": "BW", "iso_a3": "DEU", "region": "Europe"}
+  },
+  {
+    "name": "Hesse", "featureClass": "A", "featureCode": "ADM", "sourceId": "DESTATIS_GEODATA", "startDate": "1949-05-23", "latitude": 50.6521, "longitude": 9.1624, "properties": {"type": "land", "code": "HE", "iso_a3": "DEU", "region": "Europe"}
+  },
+  {
+    "name": "Saxony", "featureClass": "A", "featureCode": "ADM", "sourceId": "DESTATIS_GEODATA", "startDate": "1990-10-03", "latitude": 51.1023, "longitude": 13.2560, "properties": {"type": "land", "code": "SN", "iso_a3": "DEU", "region": "Europe"}
+  },
+  {
+    "name": "Lower Saxony", "featureClass": "A", "featureCode": "ADM", "sourceId": "DESTATIS_GEODATA", "startDate": "1949-05-23", "latitude": 52.6367, "longitude": 9.8459, "properties": {"type": "land", "code": "NI", "iso_a3": "DEU", "region": "Europe"}
+  },
+  {
+    "name": "Rhineland-Palatinate", "featureClass": "A", "featureCode": "ADM", "sourceId": "DESTATIS_GEODATA", "startDate": "1949-05-23", "latitude": 49.9113, "longitude": 7.4475, "properties": {"type": "land", "code": "RP", "iso_a3": "DEU", "region": "Europe"}
+  },
+  {
+    "name": "Hamburg", "featureClass": "A", "featureCode": "ADM", "sourceId": "DESTATIS_GEODATA", "startDate": "1949-05-23", "latitude": 53.5511, "longitude": 9.9937, "properties": {"type": "land", "code": "HH", "iso_a3": "DEU", "region": "Europe"}
+  },
+  {
+    "name": "Brandenburg", "featureClass": "A", "featureCode": "ADM", "sourceId": "DESTATIS_GEODATA", "startDate": "1990-10-03", "latitude": 52.4128, "longitude": 12.5350, "properties": {"type": "land", "code": "BB", "iso_a3": "DEU", "region": "Europe"}
+  }
+]

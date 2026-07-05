@@ -15,6 +15,8 @@ CREATE TABLE geo_feature (
     geom GEOMETRY(Geometry, 4326) NOT NULL, -- Stocke Point, Polygon, MultiPolygon... en WGS84
     properties JSONB NOT NULL DEFAULT '{}'::jsonb, -- Conteneur pour attributs customs (ICAO, STANAG...)
     source_id VARCHAR(100) NOT NULL,       -- Traçabilité: 'ONU', 'STANAG_NATO', 'USER_CUSTOM'
+    start_date DATE,
+    end_date DATE,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
@@ -23,9 +25,9 @@ CREATE TABLE geo_feature (
 CREATE TABLE feature_name (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     feature_id UUID NOT NULL,
-    language VARCHAR(10) NOT NULL,         -- ex: 'fr', 'en', ou tags techniques 'iata', 'icao', 'locode'
+    language VARCHAR(10) NOT NULL,
     name VARCHAR(255) NOT NULL,
-    is_preferred BOOLEAN DEFAULT false,
+    is_primary BOOLEAN DEFAULT false,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_feature_name_geo_feature FOREIGN KEY (feature_id) 
         REFERENCES geo_feature(id) ON DELETE CASCADE

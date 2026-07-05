@@ -1,0 +1,202 @@
+[
+  {
+    "name": "France",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 46.2276,
+    "longitude": 2.2137,
+    "properties": { "iso_a3": "FRA", "region": "Europe", "parentSourceId": null }
+  },
+  {
+    "name": "Germany",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 51.1657,
+    "longitude": 10.4515,
+    "properties": { "iso_a3": "DEU", "region": "Europe", "parentSourceId": null }
+  },
+  {
+    "name": "Italy",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 41.8719,
+    "longitude": 12.5674,
+    "properties": { "iso_a3": "ITA", "region": "Europe", "parentSourceId": null }
+  },
+  {
+    "name": "Spain",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 40.4637,
+    "longitude": -3.7492,
+    "properties": { "iso_a3": "ESP", "region": "Europe", "parentSourceId": null }
+  },
+  {
+    "name": "Belgium",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 50.5039,
+    "longitude": 4.4699,
+    "properties": { "iso_a3": "BEL", "region": "Europe", "parentSourceId": null }
+  },
+  {
+    "name": "United Kingdom",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 55.3781,
+    "longitude": -3.4360,
+    "properties": { "iso_a3": "GBR", "region": "Europe", "parentSourceId": null }
+  },
+  {
+    "name": "Netherlands",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 52.1326,
+    "longitude": 5.2913,
+    "properties": { "iso_a3": "NLD", "region": "Europe", "parentSourceId": null }
+  },
+  {
+    "name": "Switzerland",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 46.8182,
+    "longitude": 8.2275,
+    "properties": { "iso_a3": "CHE", "region": "Europe", "parentSourceId": null }
+  },
+  {
+    "name": "Sweden",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 60.1282,
+    "longitude": 18.6435,
+    "properties": { "iso_a3": "SWE", "region": "Europe", "parentSourceId": null }
+  },
+  {
+    "name": "Norway",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 60.4720,
+    "longitude": 8.4689,
+    "properties": { "iso_a3": "NOR", "region": "Europe", "parentSourceId": null }
+  },
+  {
+    "name": "United States",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 37.0902,
+    "longitude": -95.7129,
+    "properties": { "iso_a3": "USA", "region": "Americas", "parentSourceId": null }
+  },
+  {
+    "name": "Canada",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 56.1304,
+    "longitude": -106.3468,
+    "properties": { "iso_a3": "CAN", "region": "Americas", "parentSourceId": null }
+  },
+  {
+    "name": "Brazil",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": -14.2350,
+    "longitude": -51.9253,
+    "properties": { "iso_a3": "BRA", "region": "Americas", "parentSourceId": null }
+  },
+  {
+    "name": "Argentina",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": -38.4161,
+    "longitude": -63.6167,
+    "properties": { "iso_a3": "ARG", "region": "Americas", "parentSourceId": null }
+  },
+  {
+    "name": "Mexico",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 23.6345,
+    "longitude": -102.5528,
+    "properties": { "iso_a3": "MEX", "region": "Americas", "parentSourceId": null }
+  },
+  {
+    "name": "Japan",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 36.2048,
+    "longitude": 138.2529,
+    "properties": { "iso_a3": "JPN", "region": "Asia", "parentSourceId": null }
+  },
+  {
+    "name": "China",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 35.8617,
+    "longitude": 104.1954,
+    "properties": { "iso_a3": "CHN", "region": "Asia", "parentSourceId": null }
+  },
+  {
+    "name": "India",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": 20.5937,
+    "longitude": 78.9629,
+    "properties": { "iso_a3": "IND", "region": "Asia", "parentSourceId": null }
+  },
+  {
+    "name": "Australia",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": -25.2744,
+    "longitude": 133.7751,
+    "properties": { "iso_a3": "AUS", "region": "Oceania", "parentSourceId": null }
+  },
+  {
+    "name": "South Africa",
+    "featureClass": "A",
+    "featureCode": "PCLI",
+    "sourceId": "ISO-3166-1",
+    "startDate": "1900-01-01",
+    "latitude": -30.5595,
+    "longitude": 22.9375,
+    "properties": { "iso_a3": "ZAF", "region": "Africa", "parentSourceId": null }
+  }
+]

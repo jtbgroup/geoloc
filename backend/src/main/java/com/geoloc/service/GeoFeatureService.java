@@ -11,7 +11,11 @@ import org.springframework.transaction.annotation.Transactional;
 import com.geoloc.dto.GeoFeatureDtos.CreateGeoFeatureRequest;
 import com.geoloc.dto.GeoFeatureDtos.GeoFeatureResponse;
 import com.geoloc.dto.GeoFeatureDtos.UpdateGeoFeatureRequest;
+import com.geoloc.entity.FeatureHierarchy;
+import com.geoloc.entity.FeatureName;
 import com.geoloc.entity.GeoFeature;
+import com.geoloc.repository.FeatureHierarchyRepository;
+import com.geoloc.repository.FeatureNameRepository;
 import com.geoloc.repository.GeoFeatureRepository;
 
 import java.util.List;
@@ -26,9 +30,15 @@ public class GeoFeatureService {
     private static final GeometryFactory GEOMETRY_FACTORY = new GeometryFactory(new PrecisionModel(), WGS84_SRID);
 
     private final GeoFeatureRepository repository;
+    private final FeatureNameRepository nameRepository;
+    private final FeatureHierarchyRepository hierarchyRepository;
 
-    public GeoFeatureService(GeoFeatureRepository repository) {
+    public GeoFeatureService(GeoFeatureRepository repository,
+            FeatureNameRepository nameRepository,
+            FeatureHierarchyRepository hierarchyRepository) {
         this.repository = repository;
+        this.nameRepository = nameRepository;
+        this.hierarchyRepository = hierarchyRepository;
     }
 
     public List<GeoFeatureResponse> searchLocations(String query) {
@@ -73,16 +83,35 @@ public class GeoFeatureService {
     }
 
     @Transactional
-    public GeoFeatureResponse create(CreateGeoFeatureRequest request) {
-        GeoFeature feature = new GeoFeature();
-        feature.setName(request.name());
-        feature.setFeatureClass(request.featureClass());
-        feature.setFeatureCode(request.featureCode());
-        feature.setSourceId(request.sourceId());
-        feature.setGeom(toPoint(request.latitude(), request.longitude()));
-        feature.setProperties(request.properties());
-        return mapToResponse(repository.save(feature));
+public GeoFeatureResponse create(CreateGeoFeatureRequest request) {
+    // 1. Sauvegarde l'entité principale
+    GeoFeature feature = new GeoFeature();
+    feature.setName(request.name());
+    feature.setFeatureClass(request.featureClass());
+    feature.setFeatureCode(request.featureCode());
+    feature.setSourceId(request.sourceId());
+    feature.setGeom(toPoint(request.latitude(), request.longitude()));
+    feature.setStartDate(request.startDate());
+    feature.setEndDate(request.endDate());
+    feature.setProperties(request.properties());
+    
+    GeoFeature saved = repository.save(feature);
+
+    // 2. Création automatique du nom par défaut dans 'feature_name'
+    // Tu auras besoin de créer une entité FeatureName et son Repository
+    nameRepository.save(new FeatureName(saved, "en", request.name(), true));
+
+    // 3. Gestion de la hiérarchie (ex: lier aéroport à pays)
+    // On suppose que le parent est identifié dans les propriétés par "parentSourceId"
+    if (request.properties() != null && request.properties().containsKey("parentSourceId")) {
+        String parentSourceId = (String) request.properties().get("parentSourceId");
+        repository.findBySourceId(parentSourceId).ifPresent(parent -> {
+            hierarchyRepository.save(new FeatureHierarchy(parent, saved, "contains"));
+        });
     }
+
+    return mapToResponse(saved);
+}
 
     @Transactional
     public GeoFeatureResponse update(UUID id, UpdateGeoFeatureRequest request) {
@@ -147,7 +176,8 @@ public class GeoFeatureService {
                 entity.getSourceId(),
                 lat,
                 lon,
-                entity.getProperties()
-        );
+                entity.getStartDate(),
+                entity.getEndDate(),
+                entity.getProperties());
     }
 }

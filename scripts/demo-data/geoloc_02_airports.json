@@ -1,0 +1,252 @@
+[
+  {
+    "name": "London Heathrow Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1946-01-01",
+    "latitude": 51.4700,
+    "longitude": -0.4543,
+    "properties": { "icao": "EGLL", "iata": "LHR", "iso_a3": "GBR", "region": "Europe" }
+  },
+  {
+    "name": "Paris Charles de Gaulle Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1974-03-08",
+    "latitude": 49.0097,
+    "longitude": 2.5479,
+    "properties": { "icao": "LFPG", "iata": "CDG", "iso_a3": "FRA", "region": "Europe" }
+  },
+  {
+    "name": "Amsterdam Airport Schiphol",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1916-09-16",
+    "latitude": 52.3105,
+    "longitude": 4.7683,
+    "properties": { "icao": "EHAM", "iata": "AMS", "iso_a3": "NLD", "region": "Europe" }
+  },
+  {
+    "name": "Frankfurt Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1936-07-08",
+    "latitude": 50.0379,
+    "longitude": 8.5622,
+    "properties": { "icao": "EDDF", "iata": "FRA", "iso_a3": "DEU", "region": "Europe" }
+  },
+  {
+    "name": "Adolfo Suárez Madrid–Barajas Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1931-04-22",
+    "latitude": 40.4983,
+    "longitude": -3.5676,
+    "properties": { "icao": "LEMD", "iata": "MAD", "iso_a3": "ESP", "region": "Europe" }
+  },
+  {
+    "name": "Josep Tarradellas Barcelona–El Prat Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1918-01-01",
+    "latitude": 41.2974,
+    "longitude": 2.0833,
+    "properties": { "icao": "LEBL", "iata": "BCN", "iso_a3": "ESP", "region": "Europe" }
+  },
+  {
+    "name": "Munich Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1992-05-17",
+    "latitude": 48.3537,
+    "longitude": 11.7861,
+    "properties": { "icao": "EDDM", "iata": "MUC", "iso_a3": "DEU", "region": "Europe" }
+  },
+  {
+    "name": "Leonardo da Vinci–Fiumicino Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1961-01-15",
+    "latitude": 41.7999,
+    "longitude": 12.2462,
+    "properties": { "icao": "LIRF", "iata": "FCO", "iso_a3": "ITA", "region": "Europe" }
+  },
+  {
+    "name": "London Gatwick Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1958-06-09",
+    "latitude": 51.1537,
+    "longitude": -0.1821,
+    "properties": { "icao": "EGKK", "iata": "LGW", "iso_a3": "GBR", "region": "Europe" }
+  },
+  {
+    "name": "Dublin Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1940-01-19",
+    "latitude": 53.4264,
+    "longitude": -6.2499,
+    "properties": { "icao": "EIDW", "iata": "DUB", "iso_a3": "IRL", "region": "Europe" }
+  },
+  {
+    "name": "Vienna International Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1954-01-01",
+    "latitude": 48.1103,
+    "longitude": 16.5697,
+    "properties": { "icao": "LOWW", "iata": "VIE", "iso_a3": "AUT", "region": "Europe" }
+  },
+  {
+    "name": "Zurich Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1948-06-14",
+    "latitude": 47.4582,
+    "longitude": 8.5522,
+    "properties": { "icao": "LSZH", "iata": "ZRH", "iso_a3": "CHE", "region": "Europe" }
+  },
+  {
+    "name": "Humberto Delgado Airport (Lisbon)",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1942-10-15",
+    "latitude": 38.7742,
+    "longitude": -9.1342,
+    "properties": { "icao": "LPPT", "iata": "LIS", "iso_a3": "PRT", "region": "Europe" }
+  },
+  {
+    "name": "Copenhagen Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1925-04-20",
+    "latitude": 55.6180,
+    "longitude": 12.6560,
+    "properties": { "icao": "EKCH", "iata": "CPH", "iso_a3": "DNK", "region": "Europe" }
+  },
+  {
+    "name": "Palma de Mallorca Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1960-07-07",
+    "latitude": 39.5517,
+    "longitude": 2.7388,
+    "properties": { "icao": "LEPA", "iata": "PMI", "iso_a3": "ESP", "region": "Europe" }
+  },
+  {
+    "name": "Manchester Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1938-06-25",
+    "latitude": 53.3537,
+    "longitude": -2.2750,
+    "properties": { "icao": "EGCC", "iata": "MAN", "iso_a3": "GBR", "region": "Europe" }
+  },
+  {
+    "name": "Milan Malpensa Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1909-01-01",
+    "latitude": 45.6301,
+    "longitude": 8.7255,
+    "properties": { "icao": "LIMC", "iata": "MXP", "iso_a3": "ITA", "region": "Europe" }
+  },
+  {
+    "name": "Oslo Gardermoen Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1998-10-08",
+    "latitude": 60.1975,
+    "longitude": 11.1004,
+    "properties": { "icao": "ENGM", "iata": "OSL", "iso_a3": "NOR", "region": "Europe" }
+  },
+  {
+    "name": "Stockholm Arlanda Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1959-01-01",
+    "latitude": 59.6519,
+    "longitude": 17.9186,
+    "properties": { "icao": "ESSA", "iata": "ARN", "iso_a3": "SWE", "region": "Europe" }
+  },
+  {
+    "name": "Brussels Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1940-01-01",
+    "latitude": 50.9014,
+    "longitude": 4.4844,
+    "properties": { "icao": "EBBR", "iata": "BRU", "iso_a3": "BEL", "region": "Europe" }
+  },
+  {
+    "name": "Düsseldorf Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1927-04-19",
+    "latitude": 51.2895,
+    "longitude": 6.7668,
+    "properties": { "icao": "EDDL", "iata": "DUS", "iso_a3": "DEU", "region": "Europe" }
+  },
+  {
+    "name": "Berlin Brandenburg Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "2020-10-31",
+    "latitude": 52.3667,
+    "longitude": 13.5033,
+    "properties": { "icao": "EDDB", "iata": "BER", "iso_a3": "DEU", "region": "Europe" }
+  },
+  {
+    "name": "Athens International Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "2001-03-28",
+    "latitude": 37.9364,
+    "longitude": 23.9445,
+    "properties": { "icao": "LGAV", "iata": "ATH", "iso_a3": "GRC", "region": "Europe" }
+  },
+  {
+    "name": "Helsinki Vantaa Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1952-07-10",
+    "latitude": 60.3172,
+    "longitude": 24.9633,
+    "properties": { "icao": "EFHK", "iata": "HEL", "iso_a3": "FIN", "region": "Europe" }
+  },
+  {
+    "name": "Warsaw Chopin Airport",
+    "featureClass": "S",
+    "featureCode": "AIRP",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1934-04-29",
+    "latitude": 52.1657,
+    "longitude": 20.9671,
+    "properties": { "icao": "EPWA", "iata": "WAW", "iso_a3": "POL", "region": "Europe" }
+  }
+]

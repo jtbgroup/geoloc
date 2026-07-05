@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Port of Rotterdam",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1340-01-01",
+    "latitude": 51.9497,
+    "longitude": 4.1453,
+    "properties": { "locode": "NLRTM", "iso_a3": "NLD", "region": "Europe" }
+  },
+  {
+    "name": "Port of Antwerp-Bruges",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1811-01-01",
+    "latitude": 51.2600,
+    "longitude": 4.4000,
+    "properties": { "locode": "BEANR", "iso_a3": "BEL", "region": "Europe" }
+  },
+  {
+    "name": "Port of Hamburg",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1189-05-07",
+    "latitude": 53.5413,
+    "longitude": 9.9842,
+    "properties": { "locode": "DEHAM", "iso_a3": "DEU", "region": "Europe" }
+  },
+  {
+    "name": "Port of Valencia",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1483-01-01",
+    "latitude": 39.4447,
+    "longitude": -0.3242,
+    "properties": { "locode": "ESVLC", "iso_a3": "ESP", "region": "Europe" }
+  },
+  {
+    "name": "Port of Piraeus",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "0480-01-01",
+    "latitude": 37.9467,
+    "longitude": 23.6333,
+    "properties": { "locode": "GRPIR", "iso_a3": "GRC", "region": "Europe" }
+  },
+  {
+    "name": "Port of Algeciras",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1906-01-01",
+    "latitude": 36.1333,
+    "longitude": -5.4333,
+    "properties": { "locode": "ESALG", "iso_a3": "ESP", "region": "Europe" }
+  },
+  {
+    "name": "Port of Bremerhaven",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1827-01-01",
+    "latitude": 53.5500,
+    "longitude": 8.5667,
+    "properties": { "locode": "DEBRV", "iso_a3": "DEU", "region": "Europe" }
+  },
+  {
+    "name": "Port of Felixstowe",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1875-01-01",
+    "latitude": 51.9500,
+    "longitude": 1.3167,
+    "properties": { "locode": "GBFXT", "iso_a3": "GBR", "region": "Europe" }
+  },
+  {
+    "name": "Port of Gdańsk",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1920-01-01",
+    "latitude": 54.3833,
+    "longitude": 18.6667,
+    "properties": { "locode": "PLGDN", "iso_a3": "POL", "region": "Europe" }
+  },
+  {
+    "name": "Port of Marseille Fos",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "0600-01-01",
+    "latitude": 43.3425,
+    "longitude": 4.8817,
+    "properties": { "locode": "FRFOS", "iso_a3": "FRA", "region": "Europe" }
+  },
+  {
+    "name": "Port of Gioia Tauro",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1974-01-01",
+    "latitude": 38.4333,
+    "longitude": 15.8833,
+    "properties": { "locode": "ITGIT", "iso_a3": "ITA", "region": "Europe" }
+  },
+  {
+    "name": "Port of Genoa",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1100-01-01",
+    "latitude": 44.4072,
+    "longitude": 8.9214,
+    "properties": { "locode": "ITGOA", "iso_a3": "ITA", "region": "Europe" }
+  },
+  {
+    "name": "Port of Le Havre",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1517-01-01",
+    "latitude": 49.4833,
+    "longitude": 0.1000,
+    "properties": { "locode": "FRLEH", "iso_a3": "FRA", "region": "Europe" }
+  },
+  {
+    "name": "Port of Sines",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1977-01-01",
+    "latitude": 37.9500,
+    "longitude": -8.8667,
+    "properties": { "locode": "PTSIN", "iso_a3": "PRT", "region": "Europe" }
+  },
+  {
+    "name": "Port of Gdansk DCT",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "2007-01-01",
+    "latitude": 54.3667,
+    "longitude": 18.6833,
+    "properties": { "locode": "PLDCT", "iso_a3": "POL", "region": "Europe" }
+  },
+  {
+    "name": "Port of Barcelona",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "0001-01-01",
+    "latitude": 41.3667,
+    "longitude": 2.1667,
+    "properties": { "locode": "ESBCN", "iso_a3": "ESP", "region": "Europe" }
+  },
+  {
+    "name": "Port of Southampton",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1838-01-01",
+    "latitude": 50.8833,
+    "longitude": -1.4000,
+    "properties": { "locode": "GBSOU", "iso_a3": "GBR", "region": "Europe" }
+  },
+  {
+    "name": "Port of Trieste",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1719-01-01",
+    "latitude": 45.6433,
+    "longitude": 13.7633,
+    "properties": { "locode": "ITTRS", "iso_a3": "ITA", "region": "Europe" }
+  },
+  {
+    "name": "Port of Dunkirk",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1800-01-01",
+    "latitude": 51.0500,
+    "longitude": 2.3667,
+    "properties": { "locode": "FRDKE", "iso_a3": "FRA", "region": "Europe" }
+  },
+  {
+    "name": "Port of Klaipeda",
+    "featureClass": "S",
+    "featureCode": "PORT",
+    "sourceId": "DATASETS_GEO",
+    "startDate": "1923-01-01",
+    "latitude": 55.7167,
+    "longitude": 21.1333,
+    "properties": { "locode": "LTKLJ", "iso_a3": "LTU", "region": "Europe" }
+  }
+]

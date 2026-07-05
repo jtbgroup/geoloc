@@ -5,6 +5,7 @@ import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 import org.locationtech.jts.geom.Geometry;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Map;
 import java.util.UUID;
 
@@ -12,46 +13,12 @@ import java.util.UUID;
 @Table(name = "geo_feature")
 public class GeoFeature {
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setFeatureClass(String featureClass) {
-        this.featureClass = featureClass;
-    }
-
-    public void setFeatureCode(String featureCode) {
-        this.featureCode = featureCode;
-    }
-
-    public void setSourceId(String sourceId) {
-        this.sourceId = sourceId;
-    }
-
-    public void setGeom(Geometry geom) {
-        this.geom = geom;
-    }
-
-    public void setProperties(Map<String, Object> properties) {
-        this.properties = properties;
-    }
-
-    public void setCreatedAt(Instant createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public void setUpdatedAt(Instant updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
+    // 1. Identifiant
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    public UUID getId() {
-        return id;
-    }
-
+    // 2. Attributs principaux
     @Column(nullable = false)
     private String name;
 
@@ -64,14 +31,19 @@ public class GeoFeature {
     @Column(name = "source_id", length = 100, nullable = false)
     private String sourceId;
 
-    // Mapping PostGIS via JTS
-    @Column(columnDefinition = "geometry(Geometry,4326)", nullable = false)
+    @Column(columnDefinition = "geometry")
     private Geometry geom;
 
-    // Mapping JSONB natif (Hibernate 6)
     @JdbcTypeCode(SqlTypes.JSON)
     @Column(columnDefinition = "jsonb")
     private Map<String, Object> properties;
+
+    // 3. Gestion temporelle
+    @Column(name = "start_date")
+    private LocalDate startDate;
+
+    @Column(name = "end_date")
+    private LocalDate endDate;
 
     @Column(name = "created_at", updatable = false)
     private Instant createdAt;
@@ -79,47 +51,46 @@ public class GeoFeature {
     @Column(name = "updated_at")
     private Instant updatedAt;
 
+    // 4. Lifecycle Callbacks (Nettoyé)
     @PrePersist
     protected void onCreate() {
-        createdAt = Instant.now();
-        updatedAt = Instant.now();
+        Instant now = Instant.now();
+        this.createdAt = now;
+        this.updatedAt = now;
+        if (this.startDate == null) {
+            this.startDate = LocalDate.of(1900, 1, 1);
+        }
     }
 
     @PreUpdate
     protected void onUpdate() {
-        updatedAt = Instant.now();
+        this.updatedAt = Instant.now();
     }
 
-    public String getName() {
-        return name;
-    }
+    // 5. Getters & Setters (Regroupés pour la lisibilité)
+    public UUID getId() { return id; }
 
-    public String getFeatureClass() {
-        return featureClass;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public String getFeatureCode() {
-        return featureCode;
-    }
+    public String getFeatureClass() { return featureClass; }
+    public void setFeatureClass(String featureClass) { this.featureClass = featureClass; }
 
-    public String getSourceId() {
-        return sourceId;
-    }
+    public String getFeatureCode() { return featureCode; }
+    public void setFeatureCode(String featureCode) { this.featureCode = featureCode; }
 
-    public Geometry getGeom() {
-        return geom;
-    }
+    public String getSourceId() { return sourceId; }
+    public void setSourceId(String sourceId) { this.sourceId = sourceId; }
 
-    public Map<String, Object> getProperties() {
-        return properties;
-    }
+    public Geometry getGeom() { return geom; }
+    public void setGeom(Geometry geom) { this.geom = geom; }
 
-    public Instant getCreatedAt() {
-        return createdAt;
-    }
+    public Map<String, Object> getProperties() { return properties; }
+    public void setProperties(Map<String, Object> properties) { this.properties = properties; }
 
-    public Instant getUpdatedAt() {
-        return updatedAt;
-    }
+    public LocalDate getStartDate() { return startDate; }
+    public void setStartDate(LocalDate startDate) { this.startDate = startDate; }
 
+    public LocalDate getEndDate() { return endDate; }
+    public void setEndDate(LocalDate endDate) { this.endDate = endDate; }
 }

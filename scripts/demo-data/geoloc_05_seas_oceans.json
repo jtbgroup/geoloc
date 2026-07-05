@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Atlantic Ocean",
+    "featureClass": "H",
+    "featureCode": "SEA",
+    "sourceId": "WIKIPEDIA_GEODATA",
+    "startDate": "1900-01-01",
+    "latitude": 0.0,
+    "longitude": -20.0,
+    "properties": { "type": "ocean", "iso_a3": "NONE", "region": "Global" }
+  },
+  {
+    "name": "Mediterranean Sea",
+    "featureClass": "H",
+    "featureCode": "SEA",
+    "sourceId": "WIKIPEDIA_GEODATA",
+    "startDate": "1900-01-01",
+    "latitude": 35.0,
+    "longitude": 18.0,
+    "properties": { "type": "sea", "iso_a3": "NONE", "region": "Europe" }
+  },
+  {
+    "name": "North Sea",
+    "featureClass": "H",
+    "featureCode": "SEA",
+    "sourceId": "WIKIPEDIA_GEODATA",
+    "startDate": "1900-01-01",
+    "latitude": 56.0,
+    "longitude": 3.0,
+    "properties": { "type": "sea", "iso_a3": "NONE", "region": "Europe" }
+  },
+  {
+    "name": "Baltic Sea",
+    "featureClass": "H",
+    "featureCode": "SEA",
+    "sourceId": "WIKIPEDIA_GEODATA",
+    "startDate": "1900-01-01",
+    "latitude": 59.0,
+    "longitude": 20.0,
+    "properties": { "type": "sea", "iso_a3": "NONE", "region": "Europe" }
+  },
+  {
+    "name": "Black Sea",
+    "featureClass": "H",
+    "featureCode": "SEA",
+    "sourceId": "WIKIPEDIA_GEODATA",
+    "startDate": "1900-01-01",
+    "latitude": 43.0,
+    "longitude": 34.0,
+    "properties": { "type": "sea", "iso_a3": "NONE", "region": "Europe" }
+  },
+  {
+    "name": "Adriatic Sea",
+    "featureClass": "H",
+    "featureCode": "SEA",
+    "sourceId": "WIKIPEDIA_GEODATA",
+    "startDate": "1900-01-01",
+    "latitude": 42.0,
+    "longitude": 15.0,
+    "properties": { "type": "sea", "iso_a3": "NONE", "region": "Europe" }
+  },
+  {
+    "name": "Aegean Sea",
+    "featureClass": "H",
+    "featureCode": "SEA",
+    "sourceId": "WIKIPEDIA_GEODATA",
+    "startDate": "1900-01-01",
+    "latitude": 39.0,
+    "longitude": 25.0,
+    "properties": { "type": "sea", "iso_a3": "NONE", "region": "Europe" }
+  },
+  {
+    "name": "Tyrrhenian Sea",
+    "featureClass": "H",
+    "featureCode": "SEA",
+    "sourceId": "WIKIPEDIA_GEODATA",
+    "startDate": "1900-01-01",
+    "latitude": 40.0,
+    "longitude": 12.0,
+    "properties": { "type": "sea", "iso_a3": "NONE", "region": "Europe" }
+  },
+  {
+    "name": "Ionian Sea",
+    "featureClass": "H",
+    "featureCode": "SEA",
+    "sourceId": "WIKIPEDIA_GEODATA",
+    "startDate": "1900-01-01",
+    "latitude": 38.0,
+    "longitude": 18.0,
+    "properties": { "type": "sea", "iso_a3": "NONE", "region": "Europe" }
+  },
+  {
+    "name": "Norwegian Sea",
+    "featureClass": "H",
+    "featureCode": "SEA",
+    "sourceId": "WIKIPEDIA_GEODATA",
+    "startDate": "1900-01-01",
+    "latitude": 69.0,
+    "longitude": 0.0,
+    "properties": { "type": "sea", "iso_a3": "NONE", "region": "Europe" }
+  }
+]

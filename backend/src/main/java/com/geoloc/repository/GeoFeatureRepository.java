@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.geoloc.entity.GeoFeature;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
@@ -22,4 +23,6 @@ public interface GeoFeatureRepository extends JpaRepository<GeoFeature, UUID> {
     List<GeoFeature> findByFeatureClassAndFeatureCodeIn(String featureClass, List<String> featureCodes);
 
     List<GeoFeature> findByFeatureClassAndFeatureCode(String featureClass, String featureCode);
+
+    Optional<GeoFeature> findBySourceId(String sourceId);
 }
