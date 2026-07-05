@@ -7,7 +7,12 @@
     "startDate": "1900-01-01",
     "latitude": 46.2276,
     "longitude": 2.2137,
-    "properties": { "iso_a3": "FRA", "region": "Europe", "parentSourceId": null }
+    "properties": { "iso_a3": "FRA", "region": "Europe" },
+    "names": [
+      { "language": "fr", "name": "France", "isPrimary": true },
+      { "language": "en", "name": "France", "isPrimary": false },
+      { "language": "nl", "name": "Frankrijk", "isPrimary": false }
+    ]
   },
   {
     "name": "Germany",
@@ -17,7 +22,12 @@
     "startDate": "1900-01-01",
     "latitude": 51.1657,
     "longitude": 10.4515,
-    "properties": { "iso_a3": "DEU", "region": "Europe", "parentSourceId": null }
+    "properties": { "iso_a3": "DEU", "region": "Europe" },
+    "names": [
+      { "language": "fr", "name": "Allemagne", "isPrimary": false },
+      { "language": "en", "name": "Germany", "isPrimary": true },
+      { "language": "nl", "name": "Duitsland", "isPrimary": false }
+    ]
   },
   {
     "name": "Italy",
@@ -27,7 +37,12 @@
     "startDate": "1900-01-01",
     "latitude": 41.8719,
     "longitude": 12.5674,
-    "properties": { "iso_a3": "ITA", "region": "Europe", "parentSourceId": null }
+    "properties": { "iso_a3": "ITA", "region": "Europe" },
+    "names": [
+      { "language": "fr", "name": "Italie", "isPrimary": false },
+      { "language": "en", "name": "Italy", "isPrimary": true },
+      { "language": "nl", "name": "Italië", "isPrimary": false }
+    ]
   },
   {
     "name": "Spain",
@@ -37,7 +52,12 @@
     "startDate": "1900-01-01",
     "latitude": 40.4637,
     "longitude": -3.7492,
-    "properties": { "iso_a3": "ESP", "region": "Europe", "parentSourceId": null }
+    "properties": { "iso_a3": "ESP", "region": "Europe" },
+    "names": [
+      { "language": "fr", "name": "Espagne", "isPrimary": false },
+      { "language": "en", "name": "Spain", "isPrimary": true },
+      { "language": "nl", "name": "Spanje", "isPrimary": false }
+    ]
   },
   {
     "name": "Belgium",
@@ -47,7 +67,12 @@
     "startDate": "1900-01-01",
     "latitude": 50.5039,
     "longitude": 4.4699,
-    "properties": { "iso_a3": "BEL", "region": "Europe", "parentSourceId": null }
+    "properties": { "iso_a3": "BEL", "region": "Europe" },
+    "names": [
+      { "language": "fr", "name": "Belgique", "isPrimary": false },
+      { "language": "en", "name": "Belgium", "isPrimary": true },
+      { "language": "nl", "name": "België", "isPrimary": false }
+    ]
   },
   {
     "name": "United Kingdom",
@@ -57,7 +82,12 @@
     "startDate": "1900-01-01",
     "latitude": 55.3781,
     "longitude": -3.4360,
-    "properties": { "iso_a3": "GBR", "region": "Europe", "parentSourceId": null }
+    "properties": { "iso_a3": "GBR", "region": "Europe" },
+    "names": [
+      { "language": "fr", "name": "Royaume-Uni", "isPrimary": false },
+      { "language": "en", "name": "United Kingdom", "isPrimary": true },
+      { "language": "nl", "name": "Verenigd Koninkrijk", "isPrimary": false }
+    ]
   },
   {
     "name": "Netherlands",
@@ -67,7 +97,12 @@
     "startDate": "1900-01-01",
     "latitude": 52.1326,
     "longitude": 5.2913,
-    "properties": { "iso_a3": "NLD", "region": "Europe", "parentSourceId": null }
+    "properties": { "iso_a3": "NLD", "region": "Europe" },
+    "names": [
+      { "language": "fr", "name": "Pays-Bas", "isPrimary": false },
+      { "language": "en", "name": "Netherlands", "isPrimary": false },
+      { "language": "nl", "name": "Nederland", "isPrimary": true }
+    ]
   },
   {
     "name": "Switzerland",
@@ -77,7 +112,12 @@
     "startDate": "1900-01-01",
     "latitude": 46.8182,
     "longitude": 8.2275,
-    "properties": { "iso_a3": "CHE", "region": "Europe", "parentSourceId": null }
+    "properties": { "iso_a3": "CHE", "region": "Europe" },
+    "names": [
+      { "language": "fr", "name": "Suisse", "isPrimary": false },
+      { "language": "en", "name": "Switzerland", "isPrimary": true },
+      { "language": "nl", "name": "Zwitserland", "isPrimary": false }
+    ]
   },
   {
     "name": "Sweden",
@@ -87,7 +127,12 @@
     "startDate": "1900-01-01",
     "latitude": 60.1282,
     "longitude": 18.6435,
-    "properties": { "iso_a3": "SWE", "region": "Europe", "parentSourceId": null }
+    "properties": { "iso_a3": "SWE", "region": "Europe" },
+    "names": [
+      { "language": "fr", "name": "Suède", "isPrimary": false },
+      { "language": "en", "name": "Sweden", "isPrimary": true },
+      { "language": "nl", "name": "Zweden", "isPrimary": false }
+    ]
   },
   {
     "name": "Norway",
@@ -97,7 +142,12 @@
     "startDate": "1900-01-01",
     "latitude": 60.4720,
     "longitude": 8.4689,
-    "properties": { "iso_a3": "NOR", "region": "Europe", "parentSourceId": null }
+    "properties": { "iso_a3": "NOR", "region": "Europe" },
+    "names": [
+      { "language": "fr", "name": "Norvège", "isPrimary": false },
+      { "language": "en", "name": "Norway", "isPrimary": true },
+      { "language": "nl", "name": "Noorwegen", "isPrimary": false }
+    ]
   },
   {
     "name": "United States",
@@ -107,7 +157,12 @@
     "startDate": "1900-01-01",
     "latitude": 37.0902,
     "longitude": -95.7129,
-    "properties": { "iso_a3": "USA", "region": "Americas", "parentSourceId": null }
+    "properties": { "iso_a3": "USA", "region": "Americas" },
+    "names": [
+      { "language": "fr", "name": "États-Unis", "isPrimary": false },
+      { "language": "en", "name": "United States", "isPrimary": true },
+      { "language": "nl", "name": "Verenigde Staten", "isPrimary": false }
+    ]
   },
   {
     "name": "Canada",
@@ -117,7 +172,12 @@
     "startDate": "1900-01-01",
     "latitude": 56.1304,
     "longitude": -106.3468,
-    "properties": { "iso_a3": "CAN", "region": "Americas", "parentSourceId": null }
+    "properties": { "iso_a3": "CAN", "region": "Americas" },
+    "names": [
+      { "language": "fr", "name": "Canada", "isPrimary": true },
+      { "language": "en", "name": "Canada", "isPrimary": false },
+      { "language": "nl", "name": "Canada", "isPrimary": false }
+    ]
   },
   {
     "name": "Brazil",
@@ -127,7 +187,12 @@
     "startDate": "1900-01-01",
     "latitude": -14.2350,
     "longitude": -51.9253,
-    "properties": { "iso_a3": "BRA", "region": "Americas", "parentSourceId": null }
+    "properties": { "iso_a3": "BRA", "region": "Americas" },
+    "names": [
+      { "language": "fr", "name": "Brésil", "isPrimary": false },
+      { "language": "en", "name": "Brazil", "isPrimary": true },
+      { "language": "nl", "name": "Brazilië", "isPrimary": false }
+    ]
   },
   {
     "name": "Argentina",
@@ -137,7 +202,12 @@
     "startDate": "1900-01-01",
     "latitude": -38.4161,
     "longitude": -63.6167,
-    "properties": { "iso_a3": "ARG", "region": "Americas", "parentSourceId": null }
+    "properties": { "iso_a3": "ARG", "region": "Americas" },
+    "names": [
+      { "language": "fr", "name": "Argentine", "isPrimary": false },
+      { "language": "en", "name": "Argentina", "isPrimary": true },
+      { "language": "nl", "name": "Argentinië", "isPrimary": false }
+    ]
   },
   {
     "name": "Mexico",
@@ -147,7 +217,12 @@
     "startDate": "1900-01-01",
     "latitude": 23.6345,
     "longitude": -102.5528,
-    "properties": { "iso_a3": "MEX", "region": "Americas", "parentSourceId": null }
+    "properties": { "iso_a3": "MEX", "region": "Americas" },
+    "names": [
+      { "language": "fr", "name": "Mexique", "isPrimary": false },
+      { "language": "en", "name": "Mexico", "isPrimary": true },
+      { "language": "nl", "name": "Mexico", "isPrimary": false }
+    ]
   },
   {
     "name": "Japan",
@@ -157,7 +232,12 @@
     "startDate": "1900-01-01",
     "latitude": 36.2048,
     "longitude": 138.2529,
-    "properties": { "iso_a3": "JPN", "region": "Asia", "parentSourceId": null }
+    "properties": { "iso_a3": "JPN", "region": "Asia" },
+    "names": [
+      { "language": "fr", "name": "Japon", "isPrimary": false },
+      { "language": "en", "name": "Japan", "isPrimary": true },
+      { "language": "nl", "name": "Japan", "isPrimary": false }
+    ]
   },
   {
     "name": "China",
@@ -167,7 +247,12 @@
     "startDate": "1900-01-01",
     "latitude": 35.8617,
     "longitude": 104.1954,
-    "properties": { "iso_a3": "CHN", "region": "Asia", "parentSourceId": null }
+    "properties": { "iso_a3": "CHN", "region": "Asia" },
+    "names": [
+      { "language": "fr", "name": "Chine", "isPrimary": false },
+      { "language": "en", "name": "China", "isPrimary": true },
+      { "language": "nl", "name": "China", "isPrimary": false }
+    ]
   },
   {
     "name": "India",
@@ -177,7 +262,12 @@
     "startDate": "1900-01-01",
     "latitude": 20.5937,
     "longitude": 78.9629,
-    "properties": { "iso_a3": "IND", "region": "Asia", "parentSourceId": null }
+    "properties": { "iso_a3": "IND", "region": "Asia" },
+    "names": [
+      { "language": "fr", "name": "Inde", "isPrimary": false },
+      { "language": "en", "name": "India", "isPrimary": true },
+      { "language": "nl", "name": "India", "isPrimary": false }
+    ]
   },
   {
     "name": "Australia",
@@ -187,7 +277,12 @@
     "startDate": "1900-01-01",
     "latitude": -25.2744,
     "longitude": 133.7751,
-    "properties": { "iso_a3": "AUS", "region": "Oceania", "parentSourceId": null }
+    "properties": { "iso_a3": "AUS", "region": "Oceania" },
+    "names": [
+      { "language": "fr", "name": "Australie", "isPrimary": false },
+      { "language": "en", "name": "Australia", "isPrimary": true },
+      { "language": "nl", "name": "Australië", "isPrimary": false }
+    ]
   },
   {
     "name": "South Africa",
@@ -197,6 +292,11 @@
     "startDate": "1900-01-01",
     "latitude": -30.5595,
     "longitude": 22.9375,
-    "properties": { "iso_a3": "ZAF", "region": "Africa", "parentSourceId": null }
+    "properties": { "iso_a3": "ZAF", "region": "Africa" },
+    "names": [
+      { "language": "fr", "name": "Afrique du Sud", "isPrimary": false },
+      { "language": "en", "name": "South Africa", "isPrimary": true },
+      { "language": "nl", "name": "Zuid-Afrika", "isPrimary": false }
+    ]
   }
 ]

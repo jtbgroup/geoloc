@@ -34,25 +34,24 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .csrf(AbstractHttpConfigurer::disable)
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/auth/**").permitAll()
-                .requestMatchers("/api/version").permitAll()
-                .requestMatchers("/api/**").authenticated()
-                .anyRequest().permitAll()
-            )
-            .sessionManagement(session -> session
-                .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
-            )
-            .securityContext(ctx -> ctx
-                .securityContextRepository(securityContextRepository())
-            )
-            .exceptionHandling(ex -> ex
-                .authenticationEntryPoint((request, response, authException) ->
-                    response.sendError(401, "Unauthorized"))
-                .accessDeniedHandler((request, response, accessDeniedException) ->
-                    response.sendError(403, "Forbidden"))
-            );
+                .csrf(AbstractHttpConfigurer::disable)
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/version").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.GET,
+                                "/api/geo/**", "/api/geo-features/**")
+                        .permitAll()
+                        .requestMatchers("/api/**").authenticated()
+                        .anyRequest().permitAll())
+                .sessionManagement(session -> session
+                        .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
+                .securityContext(ctx -> ctx
+                        .securityContextRepository(securityContextRepository()))
+                .exceptionHandling(ex -> ex
+                        .authenticationEntryPoint(
+                                (request, response, authException) -> response.sendError(401, "Unauthorized"))
+                        .accessDeniedHandler(
+                                (request, response, accessDeniedException) -> response.sendError(403, "Forbidden")));
 
         return http.build();
     }

@@ -8,8 +8,10 @@ import org.locationtech.jts.geom.PrecisionModel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.geoloc.dto.GeoFeatureDtos.AddFeatureNameRequest;
 import com.geoloc.dto.GeoFeatureDtos.CreateGeoFeatureRequest;
 import com.geoloc.dto.GeoFeatureDtos.GeoFeatureResponse;
+import com.geoloc.dto.GeoFeatureDtos.NameEntry;
 import com.geoloc.dto.GeoFeatureDtos.UpdateGeoFeatureRequest;
 import com.geoloc.entity.FeatureHierarchy;
 import com.geoloc.entity.FeatureName;
@@ -41,12 +43,13 @@ public class GeoFeatureService {
         this.hierarchyRepository = hierarchyRepository;
     }
 
-    public List<GeoFeatureResponse> searchLocations(String query) {
-        if (query == null || query.trim().length() < 2) {
-            return List.of();
-        }
-        return repository.searchByName(query).stream().map(this::mapToResponse).collect(Collectors.toList());
+public List<GeoFeatureResponse> searchLocations(String query) {
+    if (query == null || query.trim().length() < 2) {
+        return List.of();
     }
+    return repository.searchByNameOrProperties(query.trim())
+            .stream().map(this::mapToResponse).collect(Collectors.toList());
+}
 
     public List<GeoFeatureResponse> listAll() {
         return repository.findAll().stream().map(this::mapToResponse).collect(Collectors.toList());
@@ -82,9 +85,8 @@ public class GeoFeatureService {
                 .stream().map(this::mapToResponse).collect(Collectors.toList());
     }
 
-    @Transactional
+   @Transactional
 public GeoFeatureResponse create(CreateGeoFeatureRequest request) {
-    // 1. Sauvegarde l'entité principale
     GeoFeature feature = new GeoFeature();
     feature.setName(request.name());
     feature.setFeatureClass(request.featureClass());
@@ -94,23 +96,37 @@ public GeoFeatureResponse create(CreateGeoFeatureRequest request) {
     feature.setStartDate(request.startDate());
     feature.setEndDate(request.endDate());
     feature.setProperties(request.properties());
-    
+
     GeoFeature saved = repository.save(feature);
 
-    // 2. Création automatique du nom par défaut dans 'feature_name'
-    // Tu auras besoin de créer une entité FeatureName et son Repository
-    nameRepository.save(new FeatureName(saved, "en", request.name(), true));
+    saveNames(saved, request.names(), request.name());
 
-    // 3. Gestion de la hiérarchie (ex: lier aéroport à pays)
-    // On suppose que le parent est identifié dans les propriétés par "parentSourceId"
     if (request.properties() != null && request.properties().containsKey("parentSourceId")) {
         String parentSourceId = (String) request.properties().get("parentSourceId");
-        repository.findBySourceId(parentSourceId).ifPresent(parent -> {
-            hierarchyRepository.save(new FeatureHierarchy(parent, saved, "contains"));
-        });
+        if (parentSourceId != null) {
+            repository.findBySourceId(parentSourceId).ifPresent(parent ->
+                    hierarchyRepository.save(new FeatureHierarchy(parent, saved, "contains")));
+        }
     }
 
     return mapToResponse(saved);
+}
+
+// Enregistre les traductions fournies ; si aucune n'est fournie, on retombe
+// sur le nom unique avec une langue "und" (undetermined) plutôt que de
+// supposer à tort que c'est de l'anglais.
+private void saveNames(GeoFeature feature, List<NameEntry> names, String fallbackName) {
+    if (names == null || names.isEmpty()) {
+        nameRepository.save(new FeatureName(feature, "und", fallbackName, true));
+        return;
+    }
+    for (NameEntry entry : names) {
+        nameRepository.save(new FeatureName(
+                feature,
+                entry.language(),
+                entry.name(),
+                Boolean.TRUE.equals(entry.isPrimary())));
+    }
 }
 
     @Transactional
@@ -155,6 +171,24 @@ public GeoFeatureResponse create(CreateGeoFeatureRequest request) {
         }
         return GEOMETRY_FACTORY.createPoint(new Coordinate(longitude, latitude));
     }
+
+    @Transactional
+public void addName(UUID featureId, AddFeatureNameRequest request) {
+    GeoFeature feature = repository.findById(featureId)
+            .orElseThrow(() -> new IllegalArgumentException("Feature not found"));
+    nameRepository.save(new FeatureName(
+            feature, request.language(), request.name(), Boolean.TRUE.equals(request.isPrimary())));
+}
+
+@Transactional(readOnly = true)
+public List<NameEntry> listNames(UUID featureId) {
+    if (!repository.existsById(featureId)) {
+        throw new IllegalArgumentException("Feature not found");
+    }
+    return nameRepository.findByFeature_Id(featureId).stream()
+            .map(fn -> new NameEntry(fn.getLanguage(), fn.getName(), fn.isPrimary()))
+            .collect(Collectors.toList());
+}
 
     private GeoFeatureResponse mapToResponse(GeoFeature entity) {
         Double lat = null;

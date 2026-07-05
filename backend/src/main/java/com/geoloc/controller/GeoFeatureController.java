@@ -3,8 +3,10 @@ package com.geoloc.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.geoloc.dto.GeoFeatureDtos.AddFeatureNameRequest;
 import com.geoloc.dto.GeoFeatureDtos.CreateGeoFeatureRequest;
 import com.geoloc.dto.GeoFeatureDtos.GeoFeatureResponse;
+import com.geoloc.dto.GeoFeatureDtos.NameEntry;
 import com.geoloc.dto.GeoFeatureDtos.UpdateGeoFeatureRequest;
 import com.geoloc.service.GeoFeatureService;
 
@@ -63,4 +65,23 @@ public class GeoFeatureController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/{id}/names")
+public ResponseEntity<List<NameEntry>> listNames(@PathVariable UUID id) {
+    try {
+        return ResponseEntity.ok(service.listNames(id));
+    } catch (IllegalArgumentException e) {
+        return ResponseEntity.notFound().build();
+    }
+}
+
+@PostMapping("/{id}/names")
+public ResponseEntity<Void> addName(@PathVariable UUID id, @RequestBody AddFeatureNameRequest request) {
+    try {
+        service.addName(id, request);
+        return ResponseEntity.ok().build();
+    } catch (IllegalArgumentException e) {
+        return ResponseEntity.badRequest().build();
+    }
+}
 }
